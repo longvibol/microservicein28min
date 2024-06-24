@@ -1,0 +1,138 @@
+in28Min Microservice 
+
+1. disable Postgress port :8080
+
+Run: services.msc
+
+- PEMHttpd 
+- postgress-x64-16 
+
+2. Create Get :
+
+* Think step: Resource: URL ; Method: GET; How to put to the REST *
+
+@RestController
+public class HelloWorldController {
+	
+	@GetMapping(path = "/hello-world")
+	public String helloworld() {
+		return "Hello World!";
+	}
+
+}
+
+3. Return Bean JOSON
+
+@GetMapping(path = "/hello-world-bean")
+	public HelloWorldBean helloworldbean() {
+		return new HelloWorldBean("Hello World!");
+	}
+
+--------------------
+
+public class HelloWorldBean {
+
+	private String message;
+
+	public HelloWorldBean(String message) {
+		this.message = message;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	@Override
+	public String toString() {
+		return "HelloWorldBean [message=" + message + "]";
+	}
+
+}
+
+
+------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
